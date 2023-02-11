@@ -1,0 +1,140 @@
+
+\documentclass[12pt]{article}
+\usepackage{verbatim, amsmath, amssymb, hyperref,enumerate,multicol}
+\pagestyle{empty}
+\voffset=-.5in
+\textheight=8.75in
+\textwidth=6in
+\hoffset=-.35in
+
+\newcommand{\ls}{\vspace{.1in}}
+\newcommand{\ds}{\displaystyle}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Math Foundations}
+\rhead{Written HW 1}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{document}
+
+\centerline{\bf Written Homework 1}
+
+\centerline{Name: Elliot Marshall}
+
+\begin{itemize}
+\item[1.1.5.] Let $P$ be the statement ``Student X passed every assignment in Calculus I," and let $Q$ be the statement ``Student X received a grade of C or better in Calculus I.''
+\begin{enumerate}[(a)]
+\item What does it mean for $P$ to be true? What does it mean for $Q$ to be true?
+    \begin{enumerate}[(1)]
+    \item For $P$ to be true, the student must have achieved a passing grade on every assignment they attempted (presumably a 60\% or higher) in Calculus I.
+    \item For $Q$ to be true, the student must have had an average grade of C or higher in Calculus I.
+    \end{enumerate}
+    
+\item Suppose that Student X passed every assignment in Calculus I and received a grade of B$-$, and that the instructor made the statement $P\to Q$. Would you say that the instructor lied or told the truth?
+    \begin{itemize}
+        \item The Instructor told the truth because the student apparently achieved an assignment average (including tests and quizzes as assignments) greater than a C and the student (presumably) passed the class.
+    \end{itemize}
+\item Suppose that Student X passed every assignment in Calculus I and received a grade of C$-$, and that the instructor made the statement $P\to Q$. Would you say that the instructor lied or told the truth?
+    \begin{itemize}
+        \item In this scenario, the instructor could have lied or not based on the exact grads the student got. For example, if the student received a D or C$-$ on enough assignments,
+        they would have still passed every assignment ($P$ is true) yet still received a grade worse than a C ($\neg Q$). Alternatively, if the student received an F on any assignment, then $P$ would be false and therefore $Q$ could be either True or False while the statement $P\to Q$ is True because the premise is false
+    \end{itemize}
+\item Now suppose that Student X did not pass two assignments in Calculus I and received a grade of D, and that the instructor made the statement $P\to Q$. Would you say that the instructor lied or told the truth?
+    \begin{itemize}
+        \item In this scenario, the instructor told the truth as the premise ($P$) is false.
+    \end{itemize}
+
+\item How are Parts (5b), (5c), and (5d) related to the truth table for $P\to Q$?
+    \begin{itemize}
+        \item Part (5b) has both a True premise and conclusion and is therefore true. Part (5c) has two possibilities, the first of which has a True premise but a false conclusion resulting in a lie from the instructor while the second possibility has a false premise which results in a True statement from the instructor regardless of whether or not the conclusion is also True.
+    \end{itemize}
+\end{enumerate}
+
+\hrulefill
+
+\item[1.1.7.] Following is a statement of a theorem which can be proven using the quadratic formula. For this theorem, $a$, $b$, and $c$ are real numbers.
+\begin{quote}
+{\bf Theorem} If $f$ is a quadratic function of the form $f(x)=ax^2+bx+c$ and $ac<0$, then the function $f$ has two $x$-intercepts
+\end{quote}
+Using {\bf only} this theorem, what can be concluded about the functions given by the following formulas?
+
+
+\begin{enumerate}[(a)]
+\item $g(x)=-8x^2+5x-2$: Because $-8*-2=16>0$, there are not two $x$-intercepts for this equation.
+\item $\ds h(x)=-\frac{1}{3}x^2+3x$: Because $-\frac{1}{3}*0=0 \nless 0$, there are not two $x$-intercepts for this equation.
+\item $k(x)=8x^2-5x-7$: Because $8 * -7 = -56 < 0$, there are two $x$-intercepts for this equation.
+\item $\ds j(x)=-\frac{71}{99}x^2+210$: Because $-\frac{71}{99}*210 \approx -150.61 < 0 $ there are two $x$-intercepts for this equation
+\item $f(x)=-4x^2-3x+7$: Because $-4*7 = -28 < 0 $ there are two $x$-intercepts for this equation
+\item $F(x)=-x^4+x^3+9$: Because $-1*9 = -28 < 0 $ there are two $x$-intercepts for this equation
+\end{enumerate}
+
+
+\hrulefill
+
+\item[1.2.5a.] Construct a know-show table and write a complete proof for the statement: If $m$ is an even integer, then $3m^2+2m+3$ is an odd integer.
+
+\begin{center}
+\begin{tabular}{ |c|c|c| } 
+ Step & Know & Reason
+ P & m is even & Hypothesis \\
+ P_1 & m = 2k where k is some integer & definition of integer \\  
+ P_2 & $3m^2 + 2m + 3 = 3(2k)^2 + 2(2k) + 3$ & substitution \\
+ P_3 & $3*4k^2 + 4k + 3$ & algebra \\ 
+ P_4 & $12k^2 + 4k + 3$ & algebra \\
+ P_5 & $12k^2 + 4k + 2 + 1$ & algebra \\
+ P_6 & $2(6k^2 + 2k + 1) + 1$ & algebra \\
+ Q_2 & $6k^2 + 2k + 1$ is an integer, q & closure properties of integers \\
+ Q_1 & there exists an odd integer $n = 2(q) + 1$ & definition of odd integer \\
+ Q & $3m^2 + 2m +3$ is odd & conclusion \\
+ Step & Show & Reason
+
+\end{tabular}
+\end{center}
+\textbf{Theorem:} If $m$ is an even integer, then $3m^2+2m+3$ is an odd integer which by definition is made up of $2k+1$ where k is some integer. \\
+\textbf{\emph{Proof:}} First we assume that $m$ is an even integer and will prove that $3m^2+2m+3$ is an odd integer. 
+\par By the definition of an even integer from page 16 in the text, we can conclude that there exists some integer $n$ such that $m=2n$. From here, we can substitute $2n$ for $m$:
+\begin{center}
+    $3m^2+2m+3=3(2n)^2+2(2n)+3$
+\end{center}
+Then, Using algebra, we obtain
+\begin{center}
+    $=3*4n^2+4n+3$ \\
+    $=12n^2+4n+3$ \\
+    $=12n^2+4n+2+1$ \\
+    $=2(6n^2+2n+1)+1$ \\
+\end{center}
+\par Since the integers are closed under addition, multiplication, and exponentiation, we can conclude that $6n^2+2n+1$ is also an integer. Hence $3m^2+2m+3$ has been written in the form of $2k+1$, or the definition of an odd integer. Therefore if m is an even integer, $3m^2+2m+3$ must be an odd integer.
+
+\hrulefill
+
+\item[1.2.7.] Are the following statements true or false? Justify your conclusions.
+\begin{enumerate}[(a)]
+\item If $a$, $b$, and $c$ are integers, then $ab+ac$ is an even integer.
+\begin{itemize}
+    \item False. If a is odd and only one of the other integers is odd, then $ab+ac$ is an odd integer
+\par For example, let $a=3$,$b=4$, and $c=5$, then:
+\begin{center}
+    $ab+ac=3*4+3*5$ \\
+    $=12+15$ \\
+    $=27$
+\end{center}
+which is an odd number.
+\end{itemize}
+\item If $b$ and $c$ are odd integers and $a$ is an integer, then $ab+ac$ is an even integer.
+\begin{itemize}
+    \item True. Let $a=k$, $b=2i+1$ (where i is some integer), and $c=2j+1$ (where j is some integer) \\
+    Then:
+    \begin{center}
+        $ab+ac=k(2i+1)+k(2j+1)$ \\
+        $=(2ki+k)+(2kj+k)$ \\
+        $=2ki+2kj+2k$ \\
+        $=2(ki+kj+1)$ \\
+    \end{center}
+    \par Since integers are closed under addition and multiplication, $ki+kj+1$ must be an integer, and since the definition of an even integer is $2n$ where $n$ is some integer, the Premis stated above must be true.
+\end{itemize}
+\end{enumerate}
+\end{itemize}
+\end{document}

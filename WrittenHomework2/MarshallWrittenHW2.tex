@@ -1,0 +1,142 @@
+\documentclass[12pt]{article}
+\usepackage{verbatim, amsmath, amssymb, hyperref,enumerate,multicol}
+\pagestyle{empty}
+\voffset=-.5in
+\textheight=8.75in
+\textwidth=6in
+\hoffset=-.35in
+
+\newcommand{\ls}{\vspace{.1in}}
+\newcommand{\ds}{\displaystyle}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Math Foundations}
+\rhead{Written HW 2}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{document}
+
+\centerline{\bf Written Homework 2}
+
+\centerline{Name: Elliot Marshall}
+
+
+
+\begin{itemize}
+\item[2.1.7.] Construct truth tables for $P\wedge (Q\vee R)$ and $(P\wedge Q)\vee (P\wedge R)$. What do you observe?
+
+\begin{displaymath}
+    \begin{array}{|c c c|c|c|}
+        $P$ & $Q$ & $R$ & $Q$\vee $R$ & $P$\wedge ($Q$\vee $R$)\\
+        T & T & T & T & T \\
+        T & T & F & T & T \\
+        T & F & T & T & T \\
+        T & F & F & F & F \\
+        F & T & T & T & F \\
+        F & T & F & T & F \\
+        F & F & T & T & F \\
+        F & F & F & F & F \\
+        
+    \end{array}
+\end{displaymath}
+\begin{displaymath}
+    \begin{array}{|c c c|c|c|c|}
+        $P$ & $Q$ & $R$ & ($P$\wedge$Q$) & ($P$\wedge$R$) & ($P$\wedge$Q$)\vee($P$\wedge$R$) \\
+        T & T & T & T & T & T \\
+        T & T & F & T & F & T \\
+        T & F & T & F & T & T \\
+        T & F & F & F & F & F \\
+        F & T & T & F & F & F \\
+        F & T & F & F & F & F \\
+        F & F & T & F & F & F \\
+        F & F & F & F & F & F \\
+    \end{array}
+\end{displaymath}
+I observer that these two expressions, $P\wedge (Q\vee R)$ and $(P\wedge Q)\vee (P\wedge R)$ are equivalent.
+This is due to the distributive principle.
+
+
+\hrulefill
+
+\item[2.2.6.] Use truth tables to prove the following logical equivalency from Theorem~2.8:
+\[
+[(P\vee Q)\to R]\equiv (P\to R)\wedge (Q\to R).
+\]
+\begin{displaymath}
+    \begin{array}{|c c c|c|}
+        $P$ & $Q$ & $R$ & $P$\vee $Q$ \\
+        T & T & T & T \\
+        T & T & F & F \\
+        T & F & T & T \\
+        T & F & F & F \\
+        F & T & T & T \\
+        F & T & F & F \\
+        F & F & T & T \\
+        F & F & F & T \\
+    \end{array}
+\end{displaymath}
+\begin{displaymath}
+    \begin{array}{|c c c|c|c|c|}
+        $P$ & $Q$ & $R$ & ($P$\rightarrow $R$) & ($Q$\rightarrow $R$) & ($P$\rightarrow $R$)\wedge ($Q$\rightarrow $R$) \\
+        T & T & T & T & T & T \\
+        T & T & F & F & F & F \\
+        T & F & T & T & T & T \\
+        T & F & F & F & T & F \\
+        F & T & T & T & T & T \\
+        F & T & F & T & F & F \\
+        F & F & T & T & T & T \\
+        F & F & F & T & T & T 
+    \end{array}
+\end{displaymath}
+As one can see, the pattern TFTFTFTT holds for both logical expressions which means they are equivalent.
+
+\hrulefill
+
+\item[2.2.9.] Use previously proven logical equivalencies to prove each of the following logical equivalencies.
+\begin{enumerate}
+\item[(a)] $[\neg P\to (Q\wedge \neg Q)]\equiv P$\\
+\indent ($Q\wedge \neg Q$) will always be false because it is a comparison of the two possible states.
+Therefor, if $P$ is True, then $\neg$P is false and the expression becomes
+False $\rightarrow$ False which is a true statement and therefore logically equivalent to $P$.
+On the other hand, if $P$ is False, then the statement $\neg$$P$ is True and the logical statement is
+True $\rightarrow$ True which is itself, True.
+\item[(c)] $\neg(P\leftrightarrow Q)\equiv (P\wedge \neg Q)\vee (Q\wedge \neg P)$ \\
+\indent The logical expression "if and only if" has truth values of True if the proposition and conclusion are
+of equal logical signs. Therefore, the negation of the statement ($P\leftrightarrow Q$) is true if and only if 
+$P$ and $Q$ have \emph{opposit} signs. On the RHS of the equivalence expression, we have $P$ and $\neg$$Q$ or 
+$Q$ and $\neg$$P$. Each one of these sub-expressions is true if and only if $P$ and $Q$ have opposit logical
+signs. Then if at least one of them is true, the whole RHS expression is true. So Both sides are true if and
+only if $P$ and $Q$ have opposit logical signs and is false if they are the same which makes them equivalent.
+\item[(e)] $(P\to Q)\to R\equiv (\neg P\to R)\wedge (Q\to R)$
+\indent For a given logical implication, it is True unless the Premise is True and the Conclusion is False.
+Therefore, the first term on the RHS is true \emph{unless} $P$ is False \emph{and} $R$ is False. Oppositly,
+the second term on the RHS is True \emph{unless} $Q$ is True and $R$ is False. Combining these two, the total
+logical value is True unless $P$ is False, Q is True, and R is False. On the LHS, if a Premise $P$ 
+is False and a Conclusion $Q$ is True, the expression is True. However, if the Premise term ($P\rightarrow Q$)
+is True but the Conclusion ($R$) is False, this is the only situation where the whole LHS is False. Checking
+the value of the variables, we get $P=False$, $Q=True$, and $R=False$ which so happens to be the only situation
+wherein the RHS is False. Therefore these two expressions are equivalent.
+\end{enumerate}
+
+\hrulefill
+
+\item[2.4.9.] An integer $m$ is said to have the \emph{divides property} provided that for all integers $a$ and $b$, if $m$ divides $ab$, then $m$ divides $a$ or $m$ divides $b$.
+\begin{enumerate}[(a)]
+\item Using the symbols for quantifiers, write what it means to say that the integer $m$ has the divides property. \\
+\indent $(\exists m \in \mathbb{Z} : m \mid ab \rightarrow m \mid a \vee m \mid b)$ \\
+\item Using the symbols for quantifiers, write what it means to say that the integer $m$ does not have the divides property. \\
+\indent $(\exists m \in \mathbb{Z} : m \not{\mid} ab \rightarrow m \not{\mid} a \wedge m \not{\mid} b)$ \\
+\item Write an English sentence stating what it means to say that the integer $m$ does not have the divides property. \\
+\indent For an integer m, if m does not divide an integer a and m does not divide an integer b, then m does 
+not divide the integer ab.
+\end{enumerate}
+
+\end{itemize}
+
+
+
+\end{document}

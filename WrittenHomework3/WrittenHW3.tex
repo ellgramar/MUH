@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{verbatim, amsfonts, amsmath, amssymb, hyperref,enumerate,multicol}
+\pagestyle{empty}
+\voffset=-.5in
+\textheight=8.75in
+\textwidth=6in
+\hoffset=-.35in
+
+\newcommand{\ls}{\vspace{.1in}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Math Foundations}
+\rhead{Written HW 3}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{document}
+
+\centerline{\bf Written Homework 3}
+
+
+\centerline{Name(s): Elliot Marshall}
+\begin{enumerate}
+\item[3.1.10.] Determine if each of the following propositions is true or false.  Justify each conclusion.
+\begin{enumerate}
+\item[b.] True. For each integer $a$, if $a\equiv 2 \mod 8$, then $a^2\equiv 4 \mod 8$.
+\par let $a\,\epsilon\,\Z $ and $a \equiv 2 \mod 8$, then $8\,|\, a - 2$. Since 
+$n|m\rightarrow n|ml$ for some $n,m,l\,\epsilon\,\Z$, then $\exists\,n$ S.T. 
+$n=(a-2)*(a+2) = (a^2-2^2) = (a^2-4)\equiv\,4\mod 8$.
+\item[c.] For each integer $a$, if $a^2\equiv 4 \mod 8$, then $a\equiv 2 \mod 8$.
+\par False. There are a total of 8 cases for a: $a = \{0,1,2,3,4,5,6,7\}$. The one case 
+that fufills the premis but not the conclusion is when $a = 6 $. $\therefore 
+a^2 = 36 \rightarrow 36\mod8\equiv4$ but $6\mod8\equiv6\not\equiv2$
+\end{enumerate}
+
+\hrulefill
+
+
+\item[3.2.10.] Is the following proposition true or false?  Justify.
+\begin{quote} For each integer $n$, $n$ is even if and only if 4 divides $n^2$.
+\end{quote}
+\par True.\\
+% establish integer exponentiation as multiplication
+First, since integer exponentiation is the equivalent of repetitive multiplication, $n^2 = n*n$.
+% odd integers must square to odd numbers
+Second, odd numbers square to odd numbers: let $x$ be an odd integer, then by defination, $x = 
+2k+1, k\epsilon\Z$. Then: \begin{center} $x^2 = (2k+1)^2$\\$=4k^2+4k+1$\\$=2(2k^2+2k)+1$
+\\$=2j+1$\end{center} Where $j\,\epsilon\,\Z$ since integers are closed under addition and 
+multiplication and therefore $x^2$ is odd.\\
+% if 4 divides n^2 then 2 must divide n^2
+If $4\,|\,n^2$, then $2\,|\,n^2$ since $2|4$ and $n|m\rightarrow n|ml$ for some $n,m,l\,\epsilon
+\,\Z$
+
+
+%If $4|n^2$, then $2|n^2$ since $n|m\rightarrow n|ml$ for some $n,m,l\,\epsilon\,\Z$ and since 
+%$n\,\epsilon \,\Z$ and integers are closed under multiplication $(n*n = n^2)$, $n^2$ is 
+%an even integer. Since an odd integer squared is equivalent to $(2*k+1)^2 = (4k^2+4k+1) = 
+%(2*(2k^2+2k)+1) = 2j+1,$ and $j\epsilon\Z$ because integers are closed under multiplication 
+%and addition, the square of an odd integer must be an odd integer. Therefore, since $n^2\,
+%\epsilon\,\Z$ and even integers take the form of |
+
+\hrulefill
+
+
+\item[3.3.6.]  Are the following statements true or false?  Justify.
+\begin{enumerate}
+\item[c.] For every pair of real numbers $x$ and $y$, if $x+y$ is irrational, then $x$ is irrational and $y$ is irrational.
+\item[d.] For every pair of real numbers $x$ and $y$, if $x+y$ is irrational, then $x$ is irrational or $y$ is irrational.
+\end{enumerate}
+
+\hrulefill
+
+\item[3.4.7.] Is the following proposition true or false?  Justify your conclusion with a counterexample or a proof.
+\begin{quote} For each integer $n$, if $n$ is odd, then $8|(n^2-1)$.
+\end{quote}
+
+
+\end{enumerate}
+
+
+
+\end{document}
