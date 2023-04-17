@@ -1,0 +1,77 @@
+\documentclass[11pt]{article}
+\usepackage{verbatim, amsmath, amssymb, hyperref,enumerate,multicol}
+\pagestyle{empty}
+\voffset=-.5in
+\textheight=8.75in
+\textwidth=6in
+\hoffset=-.35in
+
+\newcommand{\ls}{\vspace{.1in}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\DeclareMathOperator{\RR}{{\it R}}
+\newcommand{\abs}[1]{\lvert#1\rvert}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Math Foundations}
+\rhead{Written HW 7}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{document}
+
+
+\centerline{\bf Written Homework 7}
+
+\centerline{Name(s):}
+
+\begin{itemize}
+\item[7.1.9.] Let $R$ be the relation on $\Z$ where for all $a,b\in \Z$, $a\RR b$ if and only if $\abs{a-b}\le 2$.
+
+\begin{enumerate}[(a)]
+\item Use set builder notation to describe the relation $\RR$ as a set of ordered pairs.
+\item Determine the domain and range of the relation $\RR$.
+\item Use the roster method to specify the set of all integers $x$ such that $x\RR 5$ and the set of all integers $x$ such that $5\RR x$.
+\item If possible, find integers $x$ and $y$ such that $x\RR 8$, $8\RR y$, but $x\not \!\!\RR y$.
+\item If $a\in \Z$, use the roster method to specify the set of all $x\in \Z$ such that $x\RR a$.
+
+\end{enumerate}
+
+\hrulefill
+
+\item[7.2.15.] Define the relation $\approx$ on $\R\times\R$ as follows: For $(a,b),(c,d)\in\R\times\R$, $(a,b)\approx(c,d)$ if and only if $a^2+b^2=c^2+d^2$.
+\begin{enumerate}[(a)]
+\item Prove that $\approx$ is an equivalence relation on $\R\times\R$.
+\item List four different elements of the set 
+\[
+C=\{(x,y)\in\R\times\R\mid(x,y)\approx (4,3)\}.
+\]
+\item Give a geometric description of the set $C$.
+
+\end{enumerate}
+
+\hrulefill
+
+\item[7.3.7.] Define the relation $\sim$ on $\R$ as follows:
+\begin{quote}
+For $x,y\in\R$, $x\sim y$ if and only if $x-y\in\Q$.
+\end{quote}
+\begin{enumerate}[(a)]
+\item Prove that $\sim$ is an equivalence relation on $\R$.
+\item List four different real numbers that are in the equivalence class of $\sqrt 2$.
+\item If $a\in\Q$, what is the equivalence class of $a$?
+\item Prove that $\left[\sqrt 2\right]=\left\{r+\sqrt 2\mid r\in\Q\right\}$.
+\item If $a\in \Q$, prove that there is a bijection from $[a]$ to $\left[\sqrt 2\right]$.
+\end{enumerate}
+
+\end{itemize}
+
+
+
+\end{document}
