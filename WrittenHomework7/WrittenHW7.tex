@@ -29,18 +29,39 @@
 
 \centerline{\bf Written Homework 7}
 
-\centerline{Name(s):}
+\centerline{Name(s): Elliot Marshall}
 
 \begin{itemize}
 \item[7.1.9.] Let $R$ be the relation on $\Z$ where for all $a,b\in \Z$, $a\RR b$ if and only if $\abs{a-b}\le 2$.
 
 \begin{enumerate}[(a)]
 \item Use set builder notation to describe the relation $\RR$ as a set of ordered pairs.
+\par
+\begin{center}
+    $a\RR b = \{(a,b):a,b\subseteq \Z, -2 \leq a - b \leq 2\}$
+\end{center}
 \item Determine the domain and range of the relation $\RR$.
+\par 
+\begin{center} 
+    Domain(R) = \{$u \in a | (u,y) \in \RR$ for at least one $y \in b$\} \\
+    Range(R) = \{$v \in b | (x,v) \in \RR$ for at least one $x \in a$\}
+\end{center}
 \item Use the roster method to specify the set of all integers $x$ such that $x\RR 5$ and the set of all integers $x$ such that $5\RR x$.
+\par 
+\begin{center}
+    $x\RR 5 = \{3,4,5,6,7\}$\\
+    $5\RR x = \{3,4,5,6,7\}$
+\end{center}
 \item If possible, find integers $x$ and $y$ such that $x\RR 8$, $8\RR y$, but $x\not \!\!\RR y$.
+\par
+\begin{center}
+    x = 6, y = 10
+\end{center}
 \item If $a\in \Z$, use the roster method to specify the set of all $x\in \Z$ such that $x\RR a$.
-
+\par 
+\begin{center}
+    $x\RR a = \{x-2,x-1,x,x+1,x+2\}$
+\end{center}
 \end{enumerate}
 
 \hrulefill
@@ -48,11 +69,31 @@
 \item[7.2.15.] Define the relation $\approx$ on $\R\times\R$ as follows: For $(a,b),(c,d)\in\R\times\R$, $(a,b)\approx(c,d)$ if and only if $a^2+b^2=c^2+d^2$.
 \begin{enumerate}[(a)]
 \item Prove that $\approx$ is an equivalence relation on $\R\times\R$.
+\par To prove that $\approx$ is an equivalence relation on $\R\times\R$,
+\par it must be reflexive, symmetric, and transitive.
+\begin{enumerate}
+    \item[Reflexive:] let $(a,a)\in \R$. Then $a^2+a^2=a^2+a^2$ Then $(a,b)\approx(a,a)$
+    \item[Symmetric:] let $(a,b)(c,d)\in \R\times\R$. Then $a^2+b^2=c^2+d^2$ and Thus $c^2+d^2=a^2+b^2$.
+                        Therefore $(a,b)\approx(c,d)$ = $(c,d)\approx(a,b)$
+    \item[Transitive:] let $(a,b),(c,d),(e,f)\in \R\times\R$. Then $a^2+b^2=c^2+d^2$ and $c^2+d^2=e^2+f^2$.
+                        Therefore $a^2+b^2=e^2+f^2$ and $(a,b)\approx(c,d)$ and $(c,d)\approx(e,f)$ \\
+                        Quorum Est Demonstrandum.
+\end{enumerate}
 \item List four different elements of the set 
 \[
 C=\{(x,y)\in\R\times\R\mid(x,y)\approx (4,3)\}.
 \]
+\begin{center}
+    \begin{enumerate}
+        \item[5:] (0,5) = $0^2 + 5^2 = 5^2 = 25$
+        \item[4:] (4,3) = $4^2 + 3^2 = 16 + 9 = 25$
+        \item[3:] (3,4) = $3^2 + 4^2 = 9 + 16 = 25$
+        \item[$\sqrt{21}$:] (2,$\sqrt{21}$) = $2^2 + \sqrt{21}^2 = 4 + 21 = 25$
+        \item[$\sqrt{24}$:] (1,$\sqrt{24}$) = $1^2 + \sqrt{24}^2 = 1 + 24 = 25$
+    \end{enumerate}
+\end{center}
 \item Give a geometric description of the set $C$.
+\par For each $x,y\in\Z$, $x^2 + y^2 =25$. This apperes to be a circle with radius $\sqrt{25}$ or $5$.
 
 \end{enumerate}
 
@@ -64,8 +105,26 @@ For $x,y\in\R$, $x\sim y$ if and only if $x-y\in\Q$.
 \end{quote}
 \begin{enumerate}[(a)]
 \item Prove that $\sim$ is an equivalence relation on $\R$.
+\par To prove that $\approx$ is an equivalence relation on $\R\times\R$,
+\par it must be reflexive, symmetric, and transitive.
+\begin{enumerate}
+    \item[Reflexive:] let $x\in \R$. Then $x-x\in\Q$ Then $x\sim x$ which is true.
+    \item[Symmetric:] let $x,y\in \R$. Then $x-y\in\Q$ and $y-x\in\Q$.
+                        Therefore $x\sim y$ = $y\sim x$. This is also true.
+    \item[Transitive:] let $x,y,z\in \R$. Then $x-y\in\Q$ and $y-z\in\Q$.
+                        Therefore $x-z\in\Q$ and $x\sim y$ and $y\sim z$ therefore $x\sim z$.\\
+                        Quorum Est Demonstrandum.    
+\end{enumerate}
 \item List four different real numbers that are in the equivalence class of $\sqrt 2$.
+\begin{itemize}
+    \item[1:] $\sqrt{2} + 1 \approx 2.4142 $
+    \item[2:] $\sqrt{2} - 1 \approx 0.4142$
+    \item[3:] $\sqrt{2} - 2 \approx -0.5858$
+    \item[4:] $\sqrt{2} - 3 \approx -1.5858$
+\end{itemize}
 \item If $a\in\Q$, what is the equivalence class of $a$?
+\par The equivalence class of $a$ for positive numbers is any number whose decimal is the same as $a$,
+while for negetive numbers it is any negetive number whose decimal is the same as 1- $a$
 \item Prove that $\left[\sqrt 2\right]=\left\{r+\sqrt 2\mid r\in\Q\right\}$.
 \item If $a\in \Q$, prove that there is a bijection from $[a]$ to $\left[\sqrt 2\right]$.
 \end{enumerate}

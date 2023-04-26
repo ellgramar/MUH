@@ -1,0 +1,109 @@
+\documentclass[11pt]{article}
+\usepackage{verbatim, amsmath, amssymb, hyperref,enumerate,multicol}
+\pagestyle{empty}
+\voffset=-.5in
+\textheight=8.75in
+\textwidth=6in
+\hoffset=-.35in
+
+\newcommand{\ls}{\vspace{.1in}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\N}{\mathbb N}
+\newcommand{\nat}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\DeclareMathOperator{\RR}{{\it R}}
+\newcommand{\abs}[1]{\lvert#1\rvert}
+\DeclareMathOperator{\card}{card}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Math Foundations}
+\rhead{Written HW 8}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{document}
+
+
+\centerline{\bf Written Homework 8 (Chapter 9)}
+
+
+\centerline{Name(s): Elliot Marshall}
+
+\begin{itemize}
+\item[9.1.5] Let $A$ and $B$ be sets. Prove that
+
+\begin{enumerate}[(a)]
+\item If $A$ is a finite set, then $A\cap B$ is a finite set.
+\par $A\cap B$ contains all the elements of $B$ that are \underline{also} in $A$.
+Thus, $A\cap B$ cannot contain any elements that are not in $A$; therefore, 
+$|A\cap B|\leq |A|$. Which means that since A is a finite set, $A\cap B$ must 
+also be a finite set
+\item If $A\cup B$ is a finite set, then $A$ and $B$ are finite sets.
+\par $A\cup B$ contains all the elements in either $A$ or $B$. Since $A\cup B $
+is finite, $|A\cup B|$ must also be finite. Since $|A\cup B| > |A|$, 
+$|A\cup B| > |B|$, and $|A\cup B|$ is finite, we can conclude that $A$ and $B$ are both finite.
+\item If $A\cap B$ is an infinite set, then $A$ is an infinite set.
+\par Since $A\cap B$ is an infinite set, and it contains the elements in both $A$ and $B$, 
+we can conclude that $A$ (and $B$) is an infinite set as it contains an infinite number of elemens.
+\item If $A$ is an infinite set or $B$ is an infinite set, then $A\cup B$ is an infinite set.
+\par Since $A\cup B$ is made up of the elements in either $A$ or $B$, if $A$ is an infinite set, 
+then it contributes an infinite number of elements to $A\cup B$. Likewise if $B$ is an infinite set, 
+it too would contribute an infinite number of elements to $A\cup B$. In either case (or a combination
+ of both), $A\cup B$ is an infinite set if at least one of its subsets is infinite.
+\end{enumerate}
+
+\hrulefill
+
+\item[9.1.7] Prove the following proposition:
+\begin{enumerate}
+\item[(b)] If $A,B,C$, and $D$ are sets with $A\approx B$ and $C\approx D$, and if $A$ and $C$ are 
+disjoint and $B$ and $D$ are disjoint, then $A\cup C\approx B\cup D$.
+\par Since $A$ and $C$ are disjoint, $A\cap C = \emptyset$. Likewise, since $B$ and $D$ are disjoint,
+$B\cap D = \emptyset$. Therefore since both $A\cap C$ and $B\cap D$ are equal to $\emptyset$, 
+$A\cup C\approx B\cup D\approx \emptyset$
+\end{enumerate}
+
+\hrulefill
+
+\item[9.2.2.] Prove that each of the following sets is countably infinite.
+
+\begin{enumerate}[(a)]
+\item The set $F^+$ of all natural numbers that are multiples of 5
+\par Because the set $F^+$ is equivalent to multiples of 5, it can be rewritten as 
+$F^+ = 5n$, such that $n\,\epsilon\,\N$. Therefore, since the natural numbers $(\N)$ are countably
+ infinite, $F^+$ must also be countable infinite.
+\item The set $F$ of all integers that are multiples of 5
+\par Because the set $F^+$ is equivalent to multiples of 5, it can be rewritten as 
+$F^+ = 5n$, such that $n\,\epsilon\,\Z$. Therefore since the integers $(\Z)$ are countably infinite, 
+$F^+$ must also be countable infinite.
+\item $\left.\left\{\dfrac{1}{2^k}\,\right\rvert\, k\in\N\right\}$
+\par Because the set is based on the set of natural numbers and the set of natural numbers is countably 
+infinite, the set is also countably infinite.
+\item $\{n\in\Z\mid n\ge-10\}$
+\par Similar to part C, since the set depends on the integers greater than or equal to -10 
+(also known as $\{\N\} \cup \{-10,-9,...,-2,-1\}$) and the set of natural numbers plus the negetive 
+numbers greater than -11 is countably infinite, the set listed above is also countably infinite.
+\end{enumerate}
+
+\hrulefill
+
+\item[($\star$)]Optional Challenge: Replace one of the problems above with 9.2.9.
+
+\item[9.2.9.] Define $f:\nat\times\nat\to\nat$ as follows: For each $(m,n)\in\nat\times\nat$, \[f(m,n)=2^{m-1}(2n-1).\]
+\begin{enumerate}
+
+\item Prove that $f$ is an injection. (See the textbook for hints.)
+\item Prove that $f$ is a surjection. (See the textbook for hints.)
+\item Prove that $\nat\times\nat\approx\nat$ and hence that $\card(\nat\times\nat)=\aleph_0$.
+
+\end{enumerate}
+\end{itemize}
+
+
+
+\end{document}
